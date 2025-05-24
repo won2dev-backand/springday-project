@@ -116,7 +116,7 @@ Spring Day - CH 3 일정 관리 앱 Develop
     "title": "개인프로젝트 준비",
     "content": "개인 프로젝트 회의 자료 준비 및 발표 연습",
     "username": "심청이",
-    "createdAt": "yyyy-mm-dd",/
+    "createdAt": "yyyy-mm-dd",
     "modifiedAt": "yyyy-mm-dd"
   }
 ]
@@ -129,7 +129,7 @@ Spring Day - CH 3 일정 관리 앱 Develop
 
 - **URL**: `/todos/{id}`
 - **Method**: `GET`
-- **설명**: 특정 ID의 일정을 조회하는 API입니다.
+- **설명**: 단건 일정을 조회하는 API입니다.
 
 ### 요청 (Request)
 
@@ -168,7 +168,7 @@ Spring Day - CH 3 일정 관리 앱 Develop
 
 - **URL**: `/todos/{id}`
 - **Method**: `PUT`
-- **설명**: 특정 ID의 일정을 수정하는 API입니다.
+- **설명**: 특정 일정을 수정하는 API입니다.
 
 ### 요청 (Request)
 
@@ -214,7 +214,7 @@ Spring Day - CH 3 일정 관리 앱 Develop
 
 - **URL**: `/todos/{id}`
 - **Method**: `DELETE`
-- **설명**: 특정 ID의 일정을 삭제하는 API입니다.
+- **설명**: 특정 일정을 삭제하는 API입니다.
 
 ### 요청 (Request)
 
@@ -227,7 +227,7 @@ Spring Day - CH 3 일정 관리 앱 Develop
 
 ```json
 {
-  "message": "삭제 완료",
+  "message": "삭제 완료"
 }
 ```
 

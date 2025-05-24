@@ -1,6 +1,6 @@
 # 🗓️ Spring_day_Project
 ***
-Spring Day - CH 3 일정 관리 앱 Develop
+☀️ Spring Day - CH 3 일정 관리 앱 Develop
 ## 📔 목차 
 ***
 - 🔍 Project 소개

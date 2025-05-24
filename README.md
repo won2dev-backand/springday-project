@@ -13,6 +13,8 @@
 
 
 ## 🔍 Project 소개
+[![Postman](./postman.png)](https://documenter.getpostman.com/view/44800736/2sB2qcBL7j)
+
 
 ## 🚀 주요 기능
 

@@ -28,18 +28,20 @@
 
 
 ## 🧾 API 명세서
-| 기능    | HTTP 메서드 | URL         | 설명          |
-|-------|-------------|-------------|-------------|
-| 일정 등록 | POST        | /todos      | 일정 등록       |
-| 전체 조회 | GET         | /todos      | 전체 일정 목록 조회 |
-| 단건 조회 | GET         | /todos/{id} | 단건 일정 조회    |
-| 일정 수정 | PUT         | /todos/{id} | 특정 일정 수정    |
-| 일정 삭제 | DELETE      | /todos/{id} | 특정 일정 삭제    |
+- 일정 API
+
+| 기능 | HTTP 메서드 | URL | 설명 |
+| --- | --- | --- | --- |
+| 일정 등록 | POST | /todos | 일정 등록 |
+| 전체 조회 | GET | /todos | 전체 일정 목록 조회 |
+| 단건 조회 | GET | /todos/{id} | 단건 일정 조회 |
+| 일정 수정 | PUT | /todos/{id} | 특정 일정 수정 |
+| 일정 삭제 | DELETE | /todos/{id} | 특정 일정 삭제 |
 
 <details>
   <summary>일정 등록</summary>
 
-  ## 개요
+## 개요
 
 - **URL**: `/todos`
 - **Method**: `POST`
@@ -124,7 +126,7 @@
 </details>
 <details>
   <summary>단건 조회</summary>
-  
+
 ## 개요
 
 - **URL**: `/todos/{id}`
@@ -163,7 +165,7 @@
 </details>
 <details>
   <summary>일정 수정</summary>
-  
+
 ## 개요
 
 - **URL**: `/todos/{id}`
@@ -209,7 +211,7 @@
 </details>
 <details>
   <summary>일정 삭제</summary>
-  
+
 ## 개요
 
 - **URL**: `/todos/{id}`
@@ -241,6 +243,231 @@
 }
 ```
 </details>
+
+- 유저 API
+
+| 기능 | HTTP 메서드 | URL | 설명 |
+| --- | --- | --- | --- |
+| 유저 등록 | POST | /users | 새로운 유저 생성 |
+| 유저 전체 조회 | GET | /users | 전체 유저 목록 조회 |
+| 유저 단건 조회 | GET | /users/{id} | 단건 유저 조회 |
+| 유저 수정 | PUT | /users/{id} | 특정 유저 정보 수정 |
+| 유저 삭제 | DELETE | /users/{id} | 특정 유저 삭제 |
+
+<details>
+  <summary>유저 등록</summary>
+
+## 개요
+
+URL: `/users`
+
+Method: `POST`
+
+설명: 유저를 생성하는 API입니다.
+
+### 요청 (Request)
+
+Params: 없음
+
+Body (JSON):
+
+```json
+{
+  "username": "john_doe",
+  "email": "john.doe@example.com"
+}
+```
+
+### 성공 응답 (Response)
+
+- Status: `201 Created`
+
+```json
+{
+  "id": 1,
+  "username": "gil_dong",
+  "email": "gildong@example.com",
+  "createdAt": "yyyy-mm-dd",
+  "modifiedAt": "yyyy-mm-dd"
+}
+```
+
+### 실패 응답
+
+- Status: `400 Bad Request` 
+
+```json
+{
+  "error": "username은 필수 항목입니다."
+}
+```
+</details>
+<details>
+  <summary>유저 전체 조회</summary>
+
+## 개요
+
+URL: `/users`
+
+Method: `GET`
+
+설명: 모든 유저를 조회하는 API입니다.
+
+### 요청 (Request)
+
+Params: 없음
+
+Body: 없음
+
+### 성공 응답 (Response)
+
+Status: `200 OK`
+
+```json
+{
+    "id": 1,
+    "username": "gil_dong",
+    "email": "gildong@example.com",
+    "createdAt": "yyyy-mm-dd",
+    "modifiedAt": "yyyy-mm-dd"
+  },
+  {
+    "id": 2,
+    "username": "simcheong@example.com",
+    "email": "simcheong@example.com",
+    "createdAt": "yyyy-mm-dd",
+    "modifiedAt": "yyyy-mm-dd"
+  }
+```
+</details>
+<details>
+  <summary>유저 단건 조회</summary>
+
+## 개요
+
+URL: `/users/{id}`
+
+Method: `GET`
+
+설명: 특정 유저를 단건 조회하는 API입니다.
+
+### 요청 (Request)
+
+Params: 없음
+
+Body: 없음
+
+### 성공 응답 (Response)
+
+Status: `200 OK`
+
+```json
+{
+  "id": 1,
+  "username": "gil_dong",
+  "email": "gildong@example.com",
+  "createdAt": "yyyy-mm-dd",
+  "modifiedAt": "yyyy-mm-dd"
+}
+```
+
+### 실패 응답
+
+Status: `404 Not Found`
+
+```json
+{
+  "error": "해당 id의 유저를 찾을 수 없습니다."
+}
+```
+</details>
+<details>
+  <summary>유저 수정</summary>
+
+## 개요
+
+URL: `/users/{id}`
+
+Method: `PUT`
+
+설명: 특정 유저를 수정하는 API입니다.
+
+### 요청 (Request)
+
+Params: 없음
+
+Body (JSON):
+
+```json
+{
+  "username": "gil_dong_updated",
+  "email": "gildong.updated@example.com"
+}
+```
+
+### 성공 응답 (Response)
+
+Status: `200 OK`
+
+```json
+{
+  "id": 1,
+  "username": "gil_dong_updated",
+  "email": "gildong.updated@example.com",
+  "createdAt": "yyyy-mm-dd",
+  "modifiedAt": "yyyy-mm-dd"
+}
+```
+
+### 실패 응답
+
+Status: `404 Not Found`
+
+```json
+{
+  "error": "username은 필수 항목입니다."
+}
+```
+</details>
+<details>
+  <summary>유저 삭제</summary>
+
+## 개요
+
+URL: `/users/{id}`
+
+Method: `DELETE`
+
+설명: 특정 유저를 삭제하는 API입니다.
+
+### 요청 (Request)
+
+Params: 없음
+
+Body: 없음
+
+### 성공 응답 (Response)
+
+Status: `200 OK`
+
+```json
+{
+  "message": "유저가 삭제되었습니다."
+}
+```
+
+### 실패 응답
+
+Status: `404 Not Found`
+
+```json
+{
+  "error": "해당 id의 유저를 찾을 수 없습니다."
+}
+```
+
+</details>
+
 
 
 

@@ -272,6 +272,8 @@
 | 유저 단건 조회 | GET | /users/{id} | 단건 유저 조회 |
 | 유저 수정 | PUT | /users/{id} | 특정 유저 정보 수정 |
 | 유저 삭제 | DELETE | /users/{id} | 특정 유저 삭제 |
+| 로그인 | POST | /users/login | 유저 로그인 |
+
 
 <details>
   <summary>유저 등록</summary>
@@ -487,6 +489,49 @@ Status: `404 Not Found`
 }
 ```
 
+</details>
+<details>
+  <summary>로그인</summary>
+
+## 개요
+
+URL: `/users/login`
+
+Method: `POST`
+
+설명: 로그인 요청을 처리하는 API입니다.
+
+### 요청 (Request)
+Params: 없음
+
+Body:
+
+```json
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+```
+
+### 성공 응답 (Response)
+
+Status: `200 OK`
+
+```json
+{
+  "message": "로그인 성공"
+}
+```
+
+### 실패 응답
+
+Status: `401 Unauthorized`
+
+```json
+{
+  "error": "이메일 또는 비밀번호가 일치하지 않습니다."
+}
+```
 </details>
 
 

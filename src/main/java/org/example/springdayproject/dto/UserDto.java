@@ -10,14 +10,14 @@ public class UserDto {
 
     private Long id;
 
-    @NotBlank(message = "Username is mandatory")
+    @NotBlank(message = "사용자 이름은 필수 입력 값입니다.")
     private String username;
 
-    @Email(message = "Email should be valid")
-    @NotBlank(message = "Email is mandatory")
+    @Email(message = "유효한 이메일 주소여야 합니다.")
+    @NotBlank(message = "이메일은 필수 입력 값입니다.")
     private String email;
 
-    @NotBlank(message = "Password is mandatory")
+    @NotBlank(message = "비밀번호는 필수 입력 값입니다.")
     private String password;
 
     private LocalDateTime createdAt;
@@ -25,7 +25,7 @@ public class UserDto {
 
     public UserDto() {}
 
-    // Entity -> DTO 변환 생성자
+
     public UserDto(User user) {
         this.id = user.getId();
         this.username = user.getUsername();

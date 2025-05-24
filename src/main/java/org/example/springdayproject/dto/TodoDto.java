@@ -5,18 +5,18 @@ import jakarta.validation.constraints.NotNull;
 
 public class TodoDto {
 
-    @NotBlank(message = "할일 제목은 필수입니다.")
+    @NotBlank(message = "제목은 필수입니다.")
     private String title;
 
     private String content;
 
-    @NotNull(message = "작성자 ID는 필수입니다.")
+    @NotNull(message = "ID는 필수입니다.")
     private Long memberId;
 
     @NotBlank(message = "작성자명은 필수입니다.")
     private String username;
 
-    // getters, setters
+
     public String getTitle() {
         return title;
     }

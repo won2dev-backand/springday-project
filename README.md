@@ -13,15 +13,25 @@
 
 
 ## 🔍 Project 소개
+
+#### **Spring_day_Project**는 Spring Boot 기반의 일정 관리 웹 애플리케이션입니다.  
+#### 사용자는 일정 등록, 조회, 수정, 삭제 등 CRUD 기능을 수행할 수 있으며,  
+#### 회원가입 및 로그인 기능으로 개인화된 일정 관리를 제공합니다.  
+#### 또한 Postman을 통한 API 테스트 및 명세서 문서를 제공합니다.
+
 [![Postman](./postman.png)](https://documenter.getpostman.com/view/44800736/2sB2qcBL7j)
 
 
 ## 🚀 주요 기능
+- 일정 CRUD: 일정 등록, 조회, 수정, 삭제
+- 사용자 CRUD: 회원가입, 조회, 수정, 삭제
+- 비밀번호 필드를 활용해 회원가입
+- 로그인/인증: 세션과 쿠키 기반 인증, 필터를 활용한 인증 처리
 
 
 
 
-## 🪛 개발 환경
+## 🛠️ 사용 기술 스택
 -  ☕️ Languages  : `Java`
 -  ✏️ JDK : `Oracle OpenJDK 17.0.5`
 - ⚙️ framework : `Spring Boot 3.4.5`, `Spring Data JPA`

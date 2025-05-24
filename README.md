@@ -45,7 +45,7 @@
 
 - **URL**: `/todos`
 - **Method**: `POST`
-- **설명**: 일정을 생성하는 API입니다.
+- **설명**: 일정을 등록하는 API입니다.
 
 ### 요청 (Request)
 
@@ -56,7 +56,8 @@
 {
   "title": "팀 프로젝트 준비",
   "content": "팀 프로젝트 회의 자료 준비 및 발표 연습",
-  "username": "홍길동"
+  "username": "홍길동",
+  "memberId": 123
 }
 ```
 
@@ -69,6 +70,7 @@
   "id": 1,
   "title": "팀 프로젝트 준비",
   "content": "팀 프로젝트 회의 자료 준비 및 발표 연습",
+  "memberId": 123,
   "username": "홍길동",
   "createdAt": "yyyy-mm-dd",
   "modifiedAt": "yyyy-mm-dd"
@@ -110,6 +112,7 @@
     "title": "팀 프로젝트 준비",
     "content": "팀 프로젝트 회의 자료 준비 및 발표 연습",
     "username": "홍길동",
+    "memberId": 123,
     "createdAt": "yyyy-mm-dd",
     "modifiedAt": "yyyy-mm-dd"
   },
@@ -118,6 +121,7 @@
     "title": "개인프로젝트 준비",
     "content": "개인 프로젝트 회의 자료 준비 및 발표 연습",
     "username": "심청이",
+    "memberId": 1234,
     "createdAt": "yyyy-mm-dd",
     "modifiedAt": "yyyy-mm-dd"
   }
@@ -148,6 +152,7 @@
   "title": "팀 프로젝트 준비",
   "content": "팀 프로젝트 회의 자료 준비 및 발표 연습",
   "username": "홍길동",
+  "memberId": 123,
   "createdAt": "yyyy-mm-dd",
   "modifiedAt": "yyyy-mm-dd"
 }
@@ -180,7 +185,8 @@
 ```json
 {
   "title": "팀 프로젝트 준비 - 계획 변경",
-  "content": "팀 프로젝트 회의 자료 발표 시작으로 변경"
+  "content": "팀 프로젝트 회의 자료 발표 시작으로 변경",
+  "memberId": 123
 }
 ```
 
@@ -194,6 +200,7 @@
   "title": "팀 프로젝트 준비 - 계획 변경",
   "content": "팀 프로젝트 회의 자료 발표 시작으로 변경",
   "username": "홍길동",
+  "memberId": 123,
   "createdAt": "yyyy-mm-dd",
   "modifiedAt": "yyyy-mm-dd"
 }
@@ -274,7 +281,8 @@ Body (JSON):
 ```json
 {
   "username": "john_doe",
-  "email": "john.doe@example.com"
+  "email": "john.doe@example.com",
+  "password": "password"
 }
 ```
 
@@ -401,7 +409,8 @@ Body (JSON):
 ```json
 {
   "username": "gil_dong_updated",
-  "email": "gildong.updated@example.com"
+  "email": "gildong.updated@example.com",
+  "password": "password"
 }
 ```
 
@@ -472,3 +481,4 @@ Status: `404 Not Found`
 
 
 ## 📝 ERD
+![ERD 다이어그램](./ERD.png)

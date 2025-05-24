@@ -1,3 +1,5 @@
+[![메인 이미지](./main.png)](링크)
+
 # 🗓️ Spring_day_Project
 ***
 ☀️ Spring Day - CH 3 일정 관리 앱 Develop

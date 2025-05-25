@@ -25,7 +25,7 @@ public class Todo {
     @Column(nullable = false, length = 100)
     private String title;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "VARCHAR(255)")
     private String content;
 
     @Column(nullable = false, length = 50)

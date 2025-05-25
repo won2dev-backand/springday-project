@@ -540,4 +540,4 @@ Status: `401 Unauthorized`
 
 
 ## 📝 ERD
-![ERD 다이어그램](./ERD.png)
+![ERD 다이어그램](./ERDtodo.png)

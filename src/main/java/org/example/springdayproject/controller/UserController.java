@@ -3,7 +3,7 @@ package org.example.springdayproject.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
-import org.example.springdayproject.dto.LoginRequest;
+import org.example.springdayproject.dto.LoginDto;
 import org.example.springdayproject.dto.UserDto;
 import org.example.springdayproject.entity.User;
 import org.example.springdayproject.service.UserService;
@@ -51,9 +51,9 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest, HttpServletRequest request) {
+    public ResponseEntity<String> login(@RequestBody LoginDto loginDto, HttpServletRequest request) {
         try {
-            User user = userService.login(loginRequest.getEmail(), loginRequest.getPassword());
+            User user = userService.login(loginDto.getEmail(), loginDto.getPassword());
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
 

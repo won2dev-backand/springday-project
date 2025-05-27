@@ -35,7 +35,7 @@ public class UserDto {
         this.modifiedAt = user.getModifiedAt();
     }
 
-    // getter / setter (생략 가능하면 lombok 사용해도 좋아요)
+    
 
     public Long getId() {
         return id;
